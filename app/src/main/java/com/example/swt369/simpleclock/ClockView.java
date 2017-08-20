@@ -80,7 +80,9 @@ public class ClockView extends View {
     }
 
     private void drawClock(Canvas canvas) {
+        //保存原始状态
         canvas.save();
+        
         canvas.translate(mWidth / 2,mHeight / 2);
         canvas.rotate(-90);
 
@@ -123,6 +125,7 @@ public class ClockView extends View {
         canvas.drawLine(0,0,mTickLengthSecond,0,mPaintTickSecond);
         canvas.restore();
 
+        //恢复原始状态
         canvas.restore();
     }
 
